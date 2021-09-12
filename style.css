@@ -3,18 +3,32 @@
     --grid-rows: 1;
 }
 
+html, body {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .container {
-    max-width: 50%;
-    max-height: 50%;
-    display: grid;
+    margin: auto;
+    justify-content: center;
+    height: 550px;
+    width: 550px;
+    display: inline-grid;
     /* grid-gap: 1em; */
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    /* overflow: hidden; */
+    border: 4px solid black;
+    overflow: hidden;
 }
 
 .gridCell {
     padding: 1em;
     border: 1px solid #000;
-    text-align: center;
+    display: flex;
+}
+
+.buttons {
+    margin-top: 1em;
 }
